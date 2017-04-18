@@ -81,7 +81,6 @@ private:
 
 
     	_last_wiegand = millis();
-        Serial.print(_bit_count,DEC);
     }
 
 	static void readD1()
