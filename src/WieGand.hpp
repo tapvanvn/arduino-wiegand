@@ -1,3 +1,7 @@
+///WieGand Protocol Helper v1.0
+///Duy Nguyen <tapvanvn@gmail.com>
+///https://github.com/tapvanvn/arduino-wiegand
+
 #ifndef _H_WIEGAND
 #define _H_WIEGAND
 
@@ -66,7 +70,7 @@ private:
     {
         if(_bit_count % 8  == BuffSizeInByte)
         {
-            _bit_count = 0;
+            reset();
         }
 
         _bit_count++;
@@ -87,7 +91,7 @@ private:
     {
         if(_bit_count % 8  == BuffSizeInByte)
         {
-            _bit_count = 0;
+            reset();
         }
 
         _bit_count ++;
