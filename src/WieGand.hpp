@@ -54,7 +54,7 @@ public:
     	return ret;
     }
 
-    static int getBitCount()
+    static uint8_t getBitCount()
     {
         return _bit_count;
     }
@@ -110,7 +110,7 @@ private:
 
     static volatile unsigned long _last_wiegand;
 
-    static volatile int _bit_count;
+    static volatile uint8_t _bit_count;
     static uint8_t* _ptr;
 
     static uint8_t _buff[BuffSizeInByte];
@@ -118,7 +118,7 @@ private:
 
 #define INIT_WIEGAND(D0,D1,BuffSizeInByte)  \
     template<> volatile unsigned long WieGand<D0,D1,BuffSizeInByte>::_last_wiegand=0; \
-    template<> volatile int WieGand<D0,D1,BuffSizeInByte>::_bit_count=0; \
+    template<> volatile uint8_t WieGand<D0,D1,BuffSizeInByte>::_bit_count=0; \
     template<> uint8_t* WieGand<D0,D1,BuffSizeInByte>::_ptr=0; \
     template<> uint8_t WieGand<D0,D1,BuffSizeInByte>::_buff[BuffSizeInByte] = {0};
 
